@@ -1,239 +1,162 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
+<title>Unshrink.net</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/pngfix.js"></script>
+<meta name="description" content="An open and honest lead generation service. Now signing up for our launch on June 21st 2010. " />
+<meta name="keywords" content="lead generation,web design leads,web leads,web development leads,video production leads,seo leads" />
+<style type="text/css">
+<!--
+.style1 {
+	font-family: georgia, time, "times new roman";
+	font-size: 36px;
+}
+-->
+</style>
+</head>
 
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("images/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://stdlib.rubyonrails.org/">Ruby standard library</a></li>
-              <li><a href="http://corelib.rubyonrails.org/">Ruby core</a></li>
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+<body>
+	<div class="header">
+    	<div class="wrapper">
+        	<div class="logo"><img src="images/logo.gif" width="306" height="61" alt="logo" /></div>
         </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove or rename this file</h2>
-              <p>Routes are set up in config/routes.rb.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:migrate</code> to create your database. If you're not using SQLite (the default), edit <code>config/database.yml</code> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
     </div>
-  </body>
+    <div class="header-content-wrapper">
+        <div class="header-content">
+            <div class="header-left-content">
+                <div class="An-honest"><h1>An honest &amp; open way to buy leads</h1></div>
+                <div class="sign-up style1">
+                    Sign up now for more info
+                    and to be notified about our
+                    Late 2010 launch.            </div>
+          </div>
+    
+			<div class="right">
+        	
+            <div class="content-link"><h2>&nbsp;</h2>
+              <h2>&nbsp;</h2>
+              <h2>Sign up below:</h2>
+              </div>
+            
+          <!--  <div class="Twitter"></div>
+            <div class="webmedia"></div>
+            <div class="clear"></div>
+            <!-- Begin MailChimp Signup Form -->
+<!--[if IE]>
+<style type="text/css" media="screen">
+	#mc_embed_signup fieldset {position: relative;}
+	#mc_embed_signup legend {position: absolute; top: -1em; left: .2em;}
+</style>
+<![endif]--> 
+
+<!--[if IE 7]>
+<style type="text/css" media="screen">
+	.mc-field-group {overflow:visible;}
+</style>
+<![endif]--><script type="text/javascript">
+// delete this script tag and use a "div.mce_inline_error{ XXX !important}" selector
+// or fill this in and it will be inlined when errors are generated
+var mc_custom_error_style = '';
+</script>
+<script type="text/javascript" src="http://unshrink.us1.list-manage.com/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="http://unshrink.us1.list-manage.com/js/jquery.validate.js"></script>
+<script type="text/javascript" src="http://unshrink.us1.list-manage.com/js/jquery.form.js"></script>
+<script type="text/javascript" src="http://unshrink.us1.list-manage.com/subscribe/xs-js?u=14aea7ac74a9f3b0743f14c7d&amp;id=a53790748a"></script>
+<div id="mc_embed_signup">
+<form action="http://unshrink.us1.list-manage.com/subscribe/post?u=14aea7ac74a9f3b0743f14c7d&amp;id=a53790748a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+<fieldset>
+	
+<div class="mc-field-group">
+
+  <div class="sign-up-input">
+</div>
+</div>
+		<div id="mce-responses">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>
+		<div class="left"><span class="sign-up-input">
+		  <input type="text" value="email" name="EMAIL" class="required email" id="mce-EMAIL" />
+		  </span><br />
+          <span class="sign-up-input">
+          <select name="INDUSTRY" class="sign-up-input" id="mce-INDUSTRY" >
+          	<option selected="selected" >We specialise in...</option>
+          	<option  value="5" >Audio Production</option>
+            <option value="2" >E-commerce</option>
+            <option value="3" >E-learning</option>
+            <option value="1" >Game Development</option>
+            <option value="10" >Graphic Design</option>
+            <option value="13" >iPhone/iPad Development</option>
+            <option value="14" >Mobile App Development</option>
+            <option value="11" >Print Design</option>
+            <option value="9" >Programming</option>
+            <option value="8" >Rich Internet Applications</option>
+            <option value="4" >Search Engine Marketing/SEO</option>
+            <option value="12" >Software Development</option>
+            <option value="7" >Video Production</option>
+            <option value="6" >Viral Marketing</option>
+            <option value="15" >Web Design</option>
+            <option value="16" >Web Development</option>
+            
+          </select>
+           </span>
+           <br />
+		  <input type="submit" value=" " name="subscribe" id="mc-embedded-subscribe"  class="signup"></div></fieldset>
+</form>
+</div>
+	        <div class="clear"></div>
+            </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+     </div>
+    <div class="content">
+    	<div class="wrapper">
+        	<br />
+        	<div class="left">
+                <div class="content-link">
+                    <h2>What is it?</h2>
+                    <p class="smaller-content">Unshrink is a place where you can grow your business. We offer a unique lead generation and cross-selling platform.</p>
+                    <h2>What makes Unshrink so unique?</h2>
+                    <p class="smaller-content">To start off we are friendly, open and honest. We don’t force leads on you that you do not want, like other lead generation companies – you get to choose your own leads by viewing a short description of the lead before you click to buy it. We think this is fairer.</p><p class="smaller-content">But there’s not just that, there’s stacks more. Like the fact you get to see how many people have bought the lead before you buy it and asking our members to let us know that they have won a lead so we can take it off the system. We qualify all leads over the phone before passing them onto you too – we value quality over quantity. The most important thing to us is providing an awesome service to our customers that they value.</p>
+                    <h2>How do you get your leads?</h2>
+                    <p class="smaller-content">We will be launching search engine optimised websites, mobile apps, sponsored blogs and more but our key feature is a platform for other people (you!) to provide leads. We have tools for you to do this instantly and also an API available for you to use in your own websites, software or apps. The possibilities are endless and you can start making a profit pretty much instantly.</p>
+                    <h2>Who's it for?</h2>
+                   <p class="smaller-content">Unshrink is for both agencies and freelancers specialising in: web development, web design, graphic design, programming, mobile (iPhone, Android, Blackberry) development, RIA development, video production, seo, print design, embedded systems, game development, viral marketing, PR and e-learning. We plan to roll out to many more industries in the future.</p><p>
+Any questions or suggestions? Contact us at <a href="mailto:launch@unshrink.net">launch@unshrink.net</a> – we’re listening.</p>
+                
+                </div>
+       		 </div>
+            <div class="left">
+                <div  class="content-link">
+                    <h2>How much does it cost to join?</h2>
+                    <p class="smaller-content">Nothing. Nada. It’s free to join and browse the leads and use the API or tools (in fact we’ll pay you for that – more below). If you want to buy a lead just buy some credits and buy the lead.</p>
+                    <h2>How much do the leads cost?</h2>
+                    <p class="smaller-content">This is another thing we do differently here. A lead’s price reduces over time. Every 20 minutes a lead’s value will drop by a fiver – meaning you can get each lead for £5 if you are willing to wait – providing it doesn’t get snapped up before then. All leads start at £30 and can have a maximum of 6 people buying them. The sooner you buy the more likely you are to get the business from the lead, hence the difference in price – but if you hold out you might get an absolute bargain.</p>
+                    <h2>How much can I earn providing leads?</h2>
+                    <p class="smaller-content">We split revenue from leads you supply 50/50. We’ll either send you a cheque at the end of each month or transfer to your bank – whichever you prefer. There is no minimum amount to earn before we pay up.</p>
+                    <h2>What's this cross-selling about?</h2>
+                    <p class="smaller-content">The cross-selling tools and API allow you to easily make a profit by enabling you to offer your current clients more services. You can do this by supplying them with free quotes and advice from similar (but not the same) professions as yours. This means you could earn up to £90 for each other service your client is interested in. So if your client was interested in three other services that we offer you could earn £270 for simply providing your client with a quality service.</p>
+                    <h2>What tools will be available on launch?</h2>
+                    <p class="smaller-content">The first cross-selling tool we offer will be a web portal with a unique personalised URL. You can set-up and customise this portal by just ticking a few boxes which takes under a minute.</p>
+                </div>                
+            </div>
+        	<div class="clear"></div>
+	        <div class="footer-logo"><img src="images/footer-logo.gif" alt="footer logo" /></div>
+           
+		</div>
+    </div>
+ <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-456673-11");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
 </html>
