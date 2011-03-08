@@ -7,7 +7,8 @@ Unshrink::Application.routes.draw do
 
   get "pages/contact"
   
-  root :to => "/"
+  match 'signup',  :to => 'users#new'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
