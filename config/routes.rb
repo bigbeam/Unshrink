@@ -1,9 +1,13 @@
 Unshrink::Application.routes.draw do
+  get "users/new"
+
   get "pages/about"
 
   get "pages/home"
 
   get "pages/contact"
+  
+  root :to => "/"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
